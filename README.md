@@ -1,10 +1,11 @@
 # Gemini Direct
 
 ## The Problem
+Google confirms this: when you hit your Pro/Thinking limit, it falls back to Flash — without telling you.
 
-Using Gemini's web app (especially on the free student plan), you'll hit a hidden usage cap and the app **silently swaps your model** to a weaker one mid-conversation. One minute it's brilliant, the next it can't follow basic instructions. Google confirms this: once you hit your Pro/Thinking limit, it falls back to Flash — without telling you.
+Using Gemini's web (I experienced it on the pro student plan), when it hits a hidden usage cap, it **silently swaps the model** to a weaker one mid-conversation. One minute it's brilliant, the next it can't handle even simple prompts. 
 
-This app calls the API directly. You pick the model, it stays on that model. If you hit a limit, you get an error — not a secretly degraded response.
+This app calls the API directly. pick the model you want and it stays on that model. If you hit a limit, you get an error — not a secretly degraded response.
 
 ## Setup
 
