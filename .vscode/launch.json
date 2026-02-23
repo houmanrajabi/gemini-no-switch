@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Instance A (Port 5000)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",  // Runs whichever file is currently open
+            "console": "integratedTerminal",
+            "env": {
+                "FLASK_RUN_PORT": "5000", // Inject Env Var for Instance A
+                "FLASK_DEBUG": "1"
+            }
+        },
+        {
+            "name": "Instance B (Port 5001)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}", // Runs the SAME file
+            "console": "integratedTerminal",
+            "env": {
+                "FLASK_RUN_PORT": "5001", // Inject Env Var for Instance B
+                "FLASK_DEBUG": "1"
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Run Cluster (A + B)",
+            "configurations": ["Instance A (Port 5000)", "Instance B (Port 5001)"]
+        }
+    ]
+}
